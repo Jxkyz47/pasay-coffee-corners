@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - Pasay Coffee Corners</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #171412;
+            color: #f4eee8;
+        }
+
+        header {
+            background: #211c19;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #4a4039;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #f4eee8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #bda58f;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 30px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro h2 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #b9aea5;
+            letter-spacing: 1px;
+        }
+
+
+        .about-card {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            background: #211c19;
+            border: 1px solid #4a4039;
+        }
+
+        .photo {
+            padding: 25px;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .about-text {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .small-title {
+            color: #a9917b;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #b9aea5;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .story {
+            max-width: 750px;
+            margin: 70px auto;
+            text-align: center;
+        }
+
+        .story h3 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .story p {
+            color: #a99e95;
+            line-height: 1.8;
+        }
+
+        .values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .value {
+            border-top: 1px solid #4a4039;
+            padding-top: 25px;
+        }
+
+        .value h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .value p {
+            color: #a99e95;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: #211c19;
+            border-top: 1px solid #403731;
+            text-align: center;
+            padding: 25px;
+            color: #80756d;
+            font-size: 0.8rem;
+        }
+        @media (max-width: 700px) {
+
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            main {
+                padding: 60px 20px;
+            }
+
+            .intro h2 {
+                font-size: 2.7rem;
+            }
+
+            .about-card {
+                grid-template-columns: 1fr;
+            }
+
+            .photo img {
+                height: 400px;
+            }
+
+            .about-text {
+                padding: 30px;
+            }
+
+            .values {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Pasay Coffee Corners</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <h2>About The Guide.</h2>
+
+            <p>
+                A personal collection of places, cups, and little moments.
+            </p>
+
+        </section>
+
+
+        <section class="about-card">
+
+            <div class="photo">
+
+                <img src="images/me.jpg"
+                     alt="Jefferson De Leon at a rooftop cafe in Pasay">
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p class="small-title">
+                    The Person Behind The Guide
+                </p>
+
+                <h3>Hi, I'm Jefferson.</h3>
+
+                <p>
+                    I have always found something comforting about coffee
+                    shops—the soft hum of conversations, the smell of freshly
+                    brewed coffee, and the feeling of having somewhere to
+                    slow down.
+                </p>
+
+                <p>
+                    I created Pasay Coffee Corners as a way to share some of
+                    the places that I find interesting and worth visiting.
+                    Whether you are looking for somewhere to study, meet
+                    friends, take pictures, or simply enjoy a cup of coffee,
+                    I hope this guide helps you discover a new favorite spot.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="story">
+
+            <h3>Why I Made This Guide</h3>
+
+            <p>
+                Coffee shops can become more than just places to buy drinks.
+                They can become places where we study, talk, think, create,
+                and make memories. This guide is my small collection of those
+                places around Pasay, shared one coffee corner at a time.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Pasay Coffee Corners. One cup, one corner, one story at a time.
+        </p>
+
+    </footer>
+
+</body>
+</html>

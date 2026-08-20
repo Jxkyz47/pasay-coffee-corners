@@ -1,86 +1,567 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <h1>Pasay Coffee Corners</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pasay Coffee Corners</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #171412;
+            color: #f4eee8;
+        }
+
+        header {
+            background: #211c19;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #4a4039;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #f4eee8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #bda58f;
+        }
+
+        .hero {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 90px 30px 70px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #b9aea5;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+
+        .about-guide {
+            max-width: 950px;
+            margin: 0 auto 80px;
+            padding: 0 30px;
+        }
+
+        .guide-card {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            background: #211c19;
+            border: 1px solid #4a4039;
+        }
+
+        .guide-photo {
+            padding: 25px;
+        }
+
+        .guide-photo img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .guide-text {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .small-title {
+            color: #a9917b;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .guide-text h2 {
+            font-size: 2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .guide-text p {
+            color: #b9aea5;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+
+        /* COFFEE PICKS */
+
+        .picks {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .picks-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .picks-title h2 {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .picks-title p {
+            color: #a99e95;
+        }
+
+        .coffee-card {
+            background: #211c19;
+            border: 1px solid #4a4039;
+            margin-bottom: 35px;
+            padding: 30px;
+
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .coffee-card img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .coffee-info h3 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            color: #a9917b;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .coffee-info .description {
+            color: #b9aea5;
+            line-height: 1.8;
+        }.contact-section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 30px;
+        }
+        .contact-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .contact-title h2 {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .contact-title p {
+            color: #a99e95;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-card {
+            background: #211c19;
+            border: 1px solid #4a4039;
+            padding: 45px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-info h3 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        .contact-info p {
+            color: #a99e95;
+            line-height: 1.8;
+        }
+        .contact-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .contact-item {
+            border-top: 1px solid #4a4039;
+            padding-top: 15px;
+        }
+        .contact-item h4 {
+            color: #a9917b;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .contact-item p {
+            color: #f4eee8;
+        }
+        .contact-item a {
+            color: #f4eee8;
+            text-decoration: none;
+        }
+        .contact-item a:hover {
+            color: #bda58f;
+        }
+        .closing {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 50px 30px;
+            text-align: center;
+            border-top: 1px solid #403731;
+        }
+
+        .closing h2 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .closing p {
+            color: #a99e95;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .closing a {
+            display: inline-block;
+            background: #f0e9e2;
+            color: #211c19;
+            text-decoration: none;
+            padding: 13px 25px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .closing a:hover {
+            background: #cbbcaf;
+        }
+
+        footer {
+            background: #211c19;
+            border-top: 1px solid #403731;
+            text-align: center;
+            padding: 25px;
+            color: #80756d;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h2 {
+                font-size: 2.7rem;
+            }
+
+            .about-guide {
+                padding: 0 20px;
+            }
+
+            .guide-card {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-photo img {
+                height: 400px;
+            }
+
+            .guide-text {
+                padding: 30px;
+            }
+
+            .picks {
+                padding: 0 20px;
+            }
+
+            .picks-title h2 {
+                font-size: 2rem;
+            }
+
+            .coffee-card {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .coffee-card img {
+                width: 100%;
+                height: 300px;
+            }
+
+            .contact-card {
+                 grid-template-columns: 1fr;
+                 padding: 30px;
+            }
+
+            .contact-details {
+                 grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <p>
-        A little guide to the coffee corners of Pasay, where warm cups,
-        quiet tables, and gentle conversations turn ordinary days into
-        moments worth remembering.
-    </p>
+    <header>
 
-    <section>
-        <h2>Jefferson De Leon</h2>
+        <h1>Pasay Coffee Corners</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <h2>Find Your Corner.</h2>
+
+            <p>
+                A little guide to the coffee corners of Pasay, where warm cups,
+                quiet tables, and gentle conversations turn ordinary days into
+                moments worth remembering.
+            </p>
+
+        </section>
+
+        <section class="about-guide" id="about">
+
+            <div class="guide-card">
+
+                <div class="guide-photo">
+
+                    <img src="images/me.jpg"
+                         alt="Jefferson De Leon at a rooftop cafe in Pasay">
+
+                </div>
+
+
+                <div class="guide-text">
+
+                    <p class="small-title">
+                        The Person Behind The Guide
+                    </p>
+
+                    <h2>Hi, I'm Jefferson.</h2>
+
+                    <p>
+                        I have always found something comforting about coffee
+                        shops—the soft hum of conversations, the scent of
+                        freshly brewed coffee, and the feeling of having
+                        nowhere else to be for a while.
+                    </p>
+
+                    <p>
+                        Through this guide, I want to share some of the coffee
+                        spots around Pasay that I find worth visiting, whether
+                        you are looking for a quiet place to study, a cozy
+                        corner to gather your thoughts, or simply somewhere
+                        to sit with good coffee and good company.
+                    </p>
+
+                    <p>
+                        Every café has its own little story, and this guide
+                        is my way of collecting some of those stories,
+                        one cup at a time.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="picks" id="picks">
+
+            <div class="picks-title">
+
+                <h2>My Coffee Picks.</h2>
+
+                <p>
+                    Three places worth slowing down for.
+                </p>
+
+            </div>
+
+            <article class="coffee-card">
+
+                <img src="/images/gala.jpg"
+                     alt="Japanese-themed interior of Gala Food Park">
+
+                <div class="coffee-info">
+
+                    <h3>Gala Food Park</h3>
+
+                    <p class="location">
+                        Pasay City · Near SM Mall of Asia
+                    </p>
+
+                    <p class="description">
+                        A lively Japanese-themed food park where food, drinks,
+                        and colorful surroundings come together under one roof.
+                        I recommend Gala Food Park for days when coffee alone
+                        is not enough—for moments when you want to wander,
+                        take pictures, try something new, and share a long
+                        conversation with friends.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="coffee-card">
+
+                <img src="images/because.jpg"
+                     alt="A cup of coffee at Because Coffee">
+
+                <div class="coffee-info">
+
+                    <h3>Because Coffee</h3>
+
+                    <p class="location">
+                        Makati City
+                    </p>
+
+                    <p class="description">
+                        A welcoming place for a quiet break when the city feels
+                        a little too busy. I like the idea of stopping here with
+                        a cup in hand, letting the noise fade into the background,
+                        and giving yourself a moment to simply breathe.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="coffee-card">
+
+                <img src="images/first.jpg"
+                     alt="Coffee from But First, Coffee at SM Mall of Asia">
+
+                <div class="coffee-info">
+
+                    <h3>But First, Coffee</h3>
+
+                    <p class="location">
+                        SM Mall of Asia · Pasay City
+                    </p>
+
+                    <p class="description">
+                        A familiar coffee stop for those moments when you need
+                        a little comfort before continuing with the day. Whether
+                        you are meeting a friend, taking a break from shopping,
+                        or simply craving a cold coffee after walking around
+                        the city, it is a simple place to pause and enjoy a
+                        few quiet minutes.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="closing">
+
+            <h2>Take A Little Break.</h2>
+
+            <p>
+                Sometimes all you need is a good cup of coffee,
+                a comfortable chair, and somewhere to slow down.
+            </p>
+
+            <a href="#picks">
+                EXPLORE THE PICKS
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
 
         <p>
-            I have always found something comforting about coffee shops—the
-            soft hum of conversations, the scent of freshly brewed coffee,
-            and the feeling of having nowhere else to be for a while. Through
-            this guide, I want to share the coffee spots around Pasay
-            that I find worth visiting, whether you are looking for a quiet
-            place to study, a cozy corner to gather your thoughts, or simply
-            somewhere to sit with good coffee and good company. Every café
-            has its own little story, and this guide is my way of collecting
-            some of those stories, one cup at a time.
+            © 2026 Pasay Coffee Corners.
+            One cup, one corner, one story at a time.
         </p>
 
-        <img src="me.jpg" alt="Me, on top of a rooftop cafe in pasay" width="250">
-    </section>
-
-<h2>My Top Coffee Picks</h2>
-
-    <article>
-        <h3>Gala Food Park</h3>
-
-        <p>Pasay City, near SM Mall of Asia</p>
-
-        <p>
-            A lively Japanese-themed food park where food, drinks, and
-            colorful surroundings come together under one roof. I recommend
-            Gala Food Park for days when coffee alone is not enough—for
-            moments when you want to wander, take pictures, try something
-            new, and share a long conversation with friends. Its playful
-            atmosphere makes an ordinary food trip feel a little more like
-            an adventure.
-        </p>
-
-        <img src="gala.jpg" alt="Japanese-themed interior of Gala Food Park">
-    </article>
-
-    <article>
-        <h3>Because Coffee</h3>
-
-        <p>Makati City</p>
-
-        <p>
-            A welcoming place for a quiet break when the city feels a little
-            too busy. I like the idea of stopping here with a cup in hand,
-            letting the noise fade into the background, and giving yourself
-            a moment to simply breathe. It is the kind of coffee stop that
-            reminds you that you do not always need a reason to slow down.
-        </p>
-
-        <img src="because.jpg" alt="A cup of coffee at Because Coffee">
-    </article>
-
-    <article>
-        <h3>But First, Coffee</h3>
-
-        <p>SM Mall of Asia, Pasay City</p>
-
-        <p>
-            A familiar coffee stop for those moments when you need a little
-            comfort before continuing with the day. Whether you are meeting
-            a friend, taking a break from shopping, or simply craving a
-            cold coffee after walking around the city, it is a simple place
-            to pause and enjoy a few quiet minutes before heading back out.
-        </p>
-
-        <img src="first.jpg" alt="Coffee from But First, Coffee at SM Mall of Asia">
-    </article>
+    </footer>
 
 </body>
 </html>

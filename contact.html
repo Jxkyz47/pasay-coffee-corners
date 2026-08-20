@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Pasay Coffee Corners</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #171412;
+            color: #f4eee8;
+        }
+
+        header {
+            background: #211c19;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #4a4039;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #f4eee8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #bda58f;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 90px 30px;
+        }
+
+
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro h2 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #b9aea5;
+            line-height: 1.7;
+        }
+
+
+        .contact-card {
+            background: #211c19;
+            border: 1px solid #4a4039;
+            padding: 50px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card > p {
+            color: #a99e95;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+
+        /* CONTACT INFORMATION */
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-item {
+            border-top: 1px solid #4a4039;
+            padding-top: 20px;
+        }
+
+        .contact-item h4 {
+            color: #a9917b;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            color: #f4eee8;
+            line-height: 1.6;
+        }
+
+        .contact-item a {
+            color: #f4eee8;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #bda58f;
+        }
+
+        .recommend {
+            margin-top: 60px;
+            padding: 50px 30px;
+            text-align: center;
+            border-top: 1px solid #403731;
+        }
+
+        .recommend h3 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .recommend p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            color: #a99e95;
+            line-height: 1.7;
+        }
+
+        .recommend a {
+            display: inline-block;
+            background: #f0e9e2;
+            color: #211c19;
+            text-decoration: none;
+            padding: 13px 25px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .recommend a:hover {
+            background: #cbbcaf;
+        }
+
+        footer {
+            background: #211c19;
+            border-top: 1px solid #403731;
+            text-align: center;
+            padding: 25px;
+            color: #80756d;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            main {
+                padding: 60px 20px;
+            }
+
+            .intro h2 {
+                font-size: 2.7rem;
+            }
+
+            .contact-card {
+                padding: 30px;
+            }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>Pasay Coffee Corners</h1>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+
+        <section class="intro">
+
+            <h2>Let's Talk Coffee.</h2>
+
+            <p>
+                Have a coffee recommendation, a favorite café,
+                or simply want to share a coffee story?
+                I'd love to hear from you.
+            </p>
+
+        </section>
+
+        <section class="contact-card">
+
+            <h3>Get In Touch</h3>
+
+            <p>
+                Pasay Coffee Corners is a personal guide created to
+                discover and share interesting coffee spots around Pasay.
+                If you know a place that deserves to be featured,
+                feel free to reach out.
+            </p>
+
+
+            <div class="contact-details">
+
+
+                <div class="contact-item">
+
+                    <h4>Email</h4>
+
+                    <p>
+                        <a href="mailto:your-email@gmail.com">
+                            pasaycoffeecorners@gmail.com
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <h4>Instagram</h4>
+
+                    <p>
+                        <a href="#">
+                            @pasaycoffeecorners
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <h4>Location</h4>
+
+                    <p>
+                        Pasay City, Philippines
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <h4>Guide By</h4>
+
+                    <p>
+                        Jefferson De Leon
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section class="recommend">
+
+            <h3>Know A Good Coffee Corner?</h3>
+
+            <p>
+                Every good café has its own story.
+                If you know a coffee spot around Pasay that deserves
+                to be discovered, send me a recommendation.
+            </p>
+
+            <a href="mailto:your-email@gmail.com">
+                SEND A RECOMMENDATION
+            </a>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 Pasay Coffee Corners.
+            One cup, one corner, one story at a time.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
