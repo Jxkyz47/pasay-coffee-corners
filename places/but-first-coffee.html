@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>But First, Coffee - Pasay Coffee Corners</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #171412;
+            color: #f4eee8;
+        }
+
+
+        header {
+            background: #211c19;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #4a4039;
+        }
+
+        header h2 {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #f4eee8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #bda58f;
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 70px 30px;
+        }
+
+        .place-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .place-intro h1 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .place-intro p {
+            color: #a9917b;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .place-photo {
+            margin-bottom: 50px;
+        }
+
+        .place-photo img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .description {
+            max-width: 750px;
+            margin: 0 auto 60px;
+        }
+
+        .description h2 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .description p {
+            color: #b9aea5;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .details {
+            margin-bottom: 60px;
+        }
+
+        .details h2 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #211c19;
+        }
+
+        th,
+        td {
+            border: 1px solid #4a4039;
+            padding: 18px;
+            text-align: left;
+        }
+
+        th {
+            color: #a9917b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        td {
+            color: #b9aea5;
+        }
+
+        .back {
+            text-align: center;
+            border-top: 1px solid #403731;
+            padding-top: 40px;
+        }
+
+        .back a {
+            display: inline-block;
+            background: #f0e9e2;
+            color: #211c19;
+            text-decoration: none;
+            padding: 13px 25px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .back a:hover {
+            background: #cbbcaf;
+        }
+
+        footer {
+            background: #211c19;
+            border-top: 1px solid #403731;
+            text-align: center;
+            padding: 25px;
+            color: #80756d;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            main {
+                padding: 50px 20px;
+            }
+
+            .place-intro h1 {
+                font-size: 2.7rem;
+            }
+
+            .place-photo img {
+                height: 350px;
+            }
+
+            th,
+            td {
+                padding: 12px;
+                font-size: 0.85rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h2>Pasay Coffee Corners</h2>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="../index.html">HOME</a>
+                </li>
+
+                <li>
+                    <a href="../about.html">ABOUT</a>
+                </li>
+
+                <li>
+                    <a href="../contact.html">CONTACT</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="place-intro">
+
+            <h1>But First, Coffee</h1>
+
+            <p>
+                SM Mall of Asia · Pasay City
+            </p>
+
+        </section>
+
+
+        <!-- LARGE PHOTO -->
+
+        <section class="place-photo">
+
+            <img src="../images/first.jpg"
+                 alt="Coffee from But First, Coffee at SM Mall of Asia">
+
+        </section>
+
+        <section class="description">
+
+            <h2>Why I Recommend It</h2>
+
+            <p>
+                But First, Coffee is a familiar coffee stop for those
+                moments when you need a little comfort before continuing
+                with the day. Its location at SM Mall of Asia makes it a
+                convenient place to stop while spending time around the mall.
+            </p>
+
+            <p>
+                I recommend it for simple coffee breaks, especially when
+                you are meeting a friend, taking a break from shopping, or
+                looking for something refreshing after walking around the
+                city. It is an easy place to include in a busy day without
+                needing to make a separate trip.
+            </p>
+
+            <p>
+                Sometimes the best coffee stops are the ones that fit
+                naturally into your day. Grab a drink, sit down for a while,
+                talk with someone, or simply enjoy a quiet moment before
+                heading back out.
+            </p>
+
+        </section>
+
+        <section class="details">
+
+            <h2>Place Details</h2>
+
+            <table>
+
+                <tr>
+                    <th>Detail</th>
+                    <th>Information</th>
+                </tr>
+
+                <tr>
+                    <td>Location</td>
+                    <td>SM Mall of Asia, Pasay City</td>
+                </tr>
+
+                <tr>
+                    <td>Type</td>
+                    <td>Coffee Shop</td>
+                </tr>
+
+                <tr>
+                    <td>Price Range</td>
+                    <td>Affordable to Moderate</td>
+                </tr>
+
+                <tr>
+                    <td>Best Time to Visit</td>
+                    <td>Afternoon or Evening</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <section class="back">
+
+            <a href="../index.html">
+                BACK TO COFFEE GUIDE
+            </a>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 Pasay Coffee Corners.
+            One cup, one corner, one story at a time.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
