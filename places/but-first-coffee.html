@@ -9,7 +9,6 @@
     <title>But First, Coffee - Pasay Coffee Corners</title>
 
     <style>
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -164,6 +163,108 @@
             letter-spacing: 1px;
         }
 
+
+        .suggest-form {
+            max-width: 850px;
+            margin: 70px auto 40px;
+            padding: 50px;
+            background: #1c1917;
+            border: 1px solid #4a4039;
+        }
+
+        .suggest-form h2 {
+            color: #f5f1eb;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .suggest-form>p {
+            color: #999;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+
+        .suggest-form>form>label {
+            display: block;
+            color: #e8dfd5;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 25px;
+            margin-bottom: 8px;
+        }
+
+
+        .suggest-form input[type="text"],
+        .suggest-form input[type="email"] {
+            width: 100%;
+            padding: 14px 15px;
+            background: #25211f;
+            color: #f5f1eb;
+            border: 1px solid #5a5048;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+        }
+
+
+        .suggest-form fieldset {
+            border: 1px solid #4a4039;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .suggest-form legend {
+            color: #f5f1eb;
+            background: #1c1917;
+            padding: 0 10px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        .suggest-form fieldset label {
+            display: block;
+            color: #aaa;
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+
+        .suggest-form input[type="radio"],
+        .suggest-form input[type="checkbox"] {
+            margin-right: 10px;
+            accent-color: #c7a77b;
+        }
+
+
+        .suggest-form input:focus {
+            outline: none;
+            border-color: #c7a77b;
+            box-shadow: 0 0 0 1px #c7a77b;
+        }
+
+
+        .suggest-form button {
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: #f1eee8;
+            color: #171514;
+            border: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .suggest-form button:hover {
+            background: #c7a77b;
+        }
+
         .back a:hover {
             background: #cbbcaf;
         }
@@ -207,8 +308,12 @@
                 font-size: 0.85rem;
             }
 
-        }
+            .suggest-form {
+                margin: 50px 20px 30px;
+                padding: 30px 20px;
+            }
 
+        }
     </style>
 
 </head>
@@ -255,13 +360,9 @@
 
         </section>
 
-
-        <!-- LARGE PHOTO -->
-
         <section class="place-photo">
 
-            <img src="../images/first.jpg"
-                 alt="Coffee from But First, Coffee at SM Mall of Asia">
+            <img src="../images/first.jpg" alt="Coffee from But First, Coffee at SM Mall of Asia">
 
         </section>
 
@@ -338,6 +439,77 @@
 
 
     </main>
+
+    <section class="suggest-form">
+
+        <h2>Suggest a Coffee Spot</h2>
+
+        <p>
+            Know a coffee corner that deserves a place in this guide?
+            Share it with me and tell me what makes it worth visiting.
+        </p>
+
+        <form>
+
+            <label for="place-name">Place Name</label>
+
+            <input type="text" id="place-name" name="place-name" required>
+
+            <fieldset>
+
+                <legend>What type of place is it?</legend>
+
+                <label for="cafe">
+                    <input type="radio" id="cafe" name="category" value="cafe">
+                    Café / Coffee Shop
+                </label>
+
+                <label for="food">
+                    <input type="radio" id="food" name="category" value="food">
+                    Food & Coffee Spot
+                </label>
+
+                <label for="study">
+                    <input type="radio" id="study" name="category" value="study">
+                    Study / Quiet Spot
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>What's good about it?</legend>
+
+                <label for="affordable">
+                    <input type="checkbox" id="affordable" name="good-points" value="affordable">
+                    Affordable
+                </label>
+
+                <label for="wifi">
+                    <input type="checkbox" id="wifi" name="good-points" value="wifi">
+                    Good Wi-Fi
+                </label>
+
+                <label for="quiet">
+                    <input type="checkbox" id="quiet" name="good-points" value="quiet">
+                    Quiet & Relaxing
+                </label>
+
+            </fieldset>
+
+
+
+
+            <label for="contact-email">Contact Email</label>
+
+            <input type="email" id="contact-email" name="contact-email" required>
+
+
+            <button type="submit">Send Suggestion</button>
+
+        </form>
+
+    </section>
 
     <footer>
 
