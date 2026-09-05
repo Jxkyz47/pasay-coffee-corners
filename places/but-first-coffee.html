@@ -8,313 +8,7 @@
 
     <title>But First, Coffee - Pasay Coffee Corners</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #171412;
-            color: #f4eee8;
-        }
-
-
-        header {
-            background: #211c19;
-            padding: 25px 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #4a4039;
-        }
-
-        header h2 {
-            font-size: 1.4rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        nav a {
-            color: #f4eee8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        nav a:hover {
-            color: #bda58f;
-        }
-
-        /* MAIN */
-
-        main {
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 70px 30px;
-        }
-
-        .place-intro {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .place-intro h1 {
-            font-size: 4rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-
-        .place-intro p {
-            color: #a9917b;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-        }
-
-        .place-photo {
-            margin-bottom: 50px;
-        }
-
-        .place-photo img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .description {
-            max-width: 750px;
-            margin: 0 auto 60px;
-        }
-
-        .description h2 {
-            font-size: 1.6rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
-        .description p {
-            color: #b9aea5;
-            line-height: 1.9;
-            margin-bottom: 18px;
-        }
-
-        .details {
-            margin-bottom: 60px;
-        }
-
-        .details h2 {
-            font-size: 1.6rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #211c19;
-        }
-
-        th,
-        td {
-            border: 1px solid #4a4039;
-            padding: 18px;
-            text-align: left;
-        }
-
-        th {
-            color: #a9917b;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.8rem;
-        }
-
-        td {
-            color: #b9aea5;
-        }
-
-        .back {
-            text-align: center;
-            border-top: 1px solid #403731;
-            padding-top: 40px;
-        }
-
-        .back a {
-            display: inline-block;
-            background: #f0e9e2;
-            color: #211c19;
-            text-decoration: none;
-            padding: 13px 25px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-
-        .suggest-form {
-            max-width: 850px;
-            margin: 70px auto 40px;
-            padding: 50px;
-            background: #1c1917;
-            border: 1px solid #4a4039;
-        }
-
-        .suggest-form h2 {
-            color: #f5f1eb;
-            font-size: 1.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-        }
-
-        .suggest-form>p {
-            color: #999;
-            line-height: 1.7;
-            margin-bottom: 35px;
-        }
-
-
-        .suggest-form>form>label {
-            display: block;
-            color: #e8dfd5;
-            font-size: 0.85rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-top: 25px;
-            margin-bottom: 8px;
-        }
-
-
-        .suggest-form input[type="text"],
-        .suggest-form input[type="email"] {
-            width: 100%;
-            padding: 14px 15px;
-            background: #25211f;
-            color: #f5f1eb;
-            border: 1px solid #5a5048;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.95rem;
-        }
-
-
-        .suggest-form fieldset {
-            border: 1px solid #4a4039;
-            padding: 25px;
-            margin-top: 30px;
-        }
-
-        .suggest-form legend {
-            color: #f5f1eb;
-            background: #1c1917;
-            padding: 0 10px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-
-        .suggest-form fieldset label {
-            display: block;
-            color: #aaa;
-            margin: 15px 0;
-            line-height: 1.5;
-        }
-
-        .suggest-form input[type="radio"],
-        .suggest-form input[type="checkbox"] {
-            margin-right: 10px;
-            accent-color: #c7a77b;
-        }
-
-
-        .suggest-form input:focus {
-            outline: none;
-            border-color: #c7a77b;
-            box-shadow: 0 0 0 1px #c7a77b;
-        }
-
-
-        .suggest-form button {
-            margin-top: 30px;
-            padding: 14px 28px;
-            background: #f1eee8;
-            color: #171514;
-            border: none;
-            font-size: 0.8rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-
-        .suggest-form button:hover {
-            background: #c7a77b;
-        }
-
-        .back a:hover {
-            background: #cbbcaf;
-        }
-
-        footer {
-            background: #211c19;
-            border-top: 1px solid #403731;
-            text-align: center;
-            padding: 25px;
-            color: #80756d;
-            font-size: 0.8rem;
-        }
-
-        @media (max-width: 700px) {
-
-            header {
-                padding: 20px;
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-
-            main {
-                padding: 50px 20px;
-            }
-
-            .place-intro h1 {
-                font-size: 2.7rem;
-            }
-
-            .place-photo img {
-                height: 350px;
-            }
-
-            th,
-            td {
-                padding: 12px;
-                font-size: 0.85rem;
-            }
-
-            .suggest-form {
-                margin: 50px 20px 30px;
-                padding: 30px 20px;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="../style.css">
 
 </head>
 
@@ -348,9 +42,9 @@
 
     </header>
 
-    <main>
+<main>
 
-        <section class="place-intro">
+    <section class="place-intro">
 
             <h1>But First, Coffee</h1>
 
@@ -364,9 +58,9 @@
 
             <img src="../images/first.jpg" alt="Coffee from But First, Coffee at SM Mall of Asia">
 
-        </section>
+    </section>
 
-        <section class="description">
+    <section class="description">
 
             <h2>Why I Recommend It</h2>
 
@@ -427,16 +121,7 @@
 
             </table>
 
-        </section>
-
-        <section class="back">
-
-            <a href="../index.html">
-                BACK TO COFFEE GUIDE
-            </a>
-
-        </section>
-
+    </section>
 
 
     <section class="suggest-form">
@@ -507,6 +192,14 @@
             <button type="submit">Send Suggestion</button>
 
         </form>
+
+    </section>
+
+    <section class="back">
+
+            <a href="../index.html">
+                BACK TO COFFEE GUIDE
+            </a>
 
     </section>
 

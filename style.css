@@ -1,0 +1,752 @@
+/*VARIABLES*/
+
+:root {
+    --brand-color: #a9917b;
+    --brand-hover: #bda58f;
+    --dark-ink: #211c19;
+    --background: #171412;
+    --muted-grey: #b9aea5;
+    --light-text: #f4eee8;
+    --border-color: #4a4039;
+    --light-button: #f0e9e2;
+}
+
+
+/*BASE STYLES*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--light-text);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*HEADER*/
+
+header {
+    background: var(--dark-ink);
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1,
+header h2 {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/*NAVIGATION*/
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: var(--brand-hover);
+}
+
+
+/*MAIN*/
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 30px;
+}
+
+
+/*FOOTER*/
+
+footer {
+    background: var(--dark-ink);
+    border-top: 1px solid #403731;
+    text-align: center;
+    padding: 25px;
+    color: #80756d;
+    font-size: 0.8rem;
+}
+
+
+/*COMPONENTS*/
+
+
+/*HOME / HERO*/
+
+.hero {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 90px 30px 70px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted-grey);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+
+/*ABOUT GUIDE*/
+
+.about-guide {
+    max-width: 950px;
+    margin: 0 auto 80px;
+    padding: 0 30px;
+}
+
+.guide-card {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background: var(--dark-ink);
+    border: 1px solid var(--border-color);
+}
+
+.guide-photo {
+    padding: 25px;
+}
+
+.guide-photo img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.guide-text {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.small-title {
+    color: var(--brand-color);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.guide-text h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.guide-text p {
+    color: var(--muted-grey);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/*PRODUCT / COFFEE CARDS*/
+
+
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.coffee-card {
+    background: var(--card-background);
+    color: var(--light-text);
+    border: 1px solid var(--border-color);
+    border-left: 6px solid var(--brand);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.coffee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.coffee-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.coffee-info {
+    padding: 25px;
+}
+
+.coffee-info h3 {
+    color: var(--light-text);
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+.coffee-info .location {
+    color: var(--brand);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.coffee-info p {
+    color: var(--light-text);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.coffee-info .read-button {
+    display: inline-block;
+    background: var(--light-text);
+    color: var(--dark-ink);
+    text-decoration: none;
+    padding: 12px 22px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.coffee-info .read-button:hover {
+    background: var(--brand);
+    color: var(--dark-ink);
+}
+
+/*CONTACT PAGE*/
+
+.contact-section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 30px;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-title h2 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.contact-title p {
+    color: #a99e95;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: var(--dark-ink);
+    border: 1px solid var(--border-color);
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #a99e95;
+    line-height: 1.8;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.contact-item {
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.contact-item h4 {
+    color: var(--brand-color);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.contact-item p {
+    color: var(--light-text);
+}
+
+.contact-item a {
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--brand-hover);
+}
+
+
+/*CLOSING / RECOMMENDATION*/
+
+.closing,
+.recommend {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 50px 30px;
+    text-align: center;
+    border-top: 1px solid #403731;
+}
+
+.closing h2,
+.recommend h3 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.closing p,
+.recommend p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #a99e95;
+    line-height: 1.7;
+}
+
+.closing a,
+.recommend a,
+.back a {
+    display: inline-block;
+    background: var(--light-button);
+    color: var(--dark-ink);
+    text-decoration: none;
+    padding: 13px 25px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.closing a:hover,
+.recommend a:hover,
+.back a:hover {
+    background: #cbbcaf;
+}
+
+
+/*READ BUTTON*/
+
+.read-button {
+    display: inline-block;
+    background: var(--background);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.read-button:hover {
+    background: #444;
+}
+
+
+/*PRODUCT DETAIL PAGES*/
+
+.place-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.place-intro h1 {
+    font-size: 4rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.place-intro p {
+    color: var(--brand-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.place-photo {
+    margin-bottom: 50px;
+}
+
+.place-photo img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.description {
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+.description h2,
+.details h2 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.description p {
+    color: var(--muted-grey);
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.details {
+    margin-bottom: 60px;
+}
+
+.details h2 {
+    margin-bottom: 25px;
+}
+
+
+/*TABLE*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--dark-ink);
+}
+
+th,
+td {
+    border: 1px solid var(--border-color);
+    padding: 18px;
+    text-align: left;
+}
+
+th {
+    color: var(--brand-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+td {
+    color: var(--muted-grey);
+}
+
+
+/*BACK BUTTON */
+
+.back {
+    text-align: center;
+    border-top: 5px solid #403731;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+/*CONTACT FORM*/
+
+.suggest-form {
+    max-width: 740px;
+    margin: 45px auto 80px;
+}
+
+.suggest-form fieldset {
+    border: 1px solid var(--border-color);
+    padding: 35px 40px 40px;
+    background: var(--dark-ink);
+}
+
+.suggest-form legend {
+    padding: 0 10px;
+    margin-left: 5px;
+    color: var(--light-text);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.suggest-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--light-text);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.suggest-form input,
+.suggest-form select,
+.suggest-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 22px;
+
+    background: var(--background);
+    color: var(--light-text);
+
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.suggest-form input:focus,
+.suggest-form select:focus,
+.suggest-form textarea:focus {
+    outline: none;
+    border-color: var(--brand-color);
+}
+
+.suggest-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.suggest-form button {
+    display: inline-block;
+    padding: 13px 28px;
+
+    background: var(--light-button);
+    color: var(--dark-ink);
+
+    border: none;
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: 0.2s ease;
+}
+
+.suggest-form button:hover {
+    background: var(--brand-hover);
+    color: var(--light-text);
+}
+
+
+/*CONTACT FORM*/
+
+form {
+    max-width: 850px;
+    margin: 50px auto;
+}
+
+fieldset {
+    background: #1c1917;
+    border: 1px solid var(--border-color);
+    padding: 45px 50px 50px;
+}
+
+legend {
+    color: #f5f1eb;
+    background: #1c1917;
+    padding: 0 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    color: #e8dfd5;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 22px;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #5a5048;
+    background: #25211f;
+    color: #f5f1eb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+select {
+    cursor: pointer;
+}
+
+
+/*RESPONSIVE DESIGN*/
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav li {
+        margin-right: 15px;
+    }
+
+    main {
+        padding: 60px 20px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2,
+    .intro h2,
+    .place-intro h1 {
+        font-size: 2.7rem;
+    }
+
+    .about-guide {
+        padding: 0 20px;
+    }
+
+    .guide-card,
+    .about-card {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-photo img {
+        height: 400px;
+    }
+
+    .guide-text,
+    .about-text {
+        padding: 30px;
+    }
+
+    .coffee-card {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        height: 230px;
+    }
+
+    .coffee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .coffee-card img {
+        width: 100%;
+        height: 230px;
+    }
+
+    .values {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        margin: 40px 20px;
+    }
+
+    fieldset {
+        padding: 35px 25px 40px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    .place-photo img {
+        height: 350px;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .suggest-form {
+        margin: 50px 20px 30px;
+        padding: 30px 20px;
+    }
+}
