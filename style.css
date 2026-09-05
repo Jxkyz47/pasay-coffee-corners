@@ -290,12 +290,13 @@ footer {
 }
 
 .contact-card {
-    background: var(--dark-ink);
+    background: var(--card-background);
     border: 1px solid var(--border-color);
+    border-radius: 12px;
     padding: 45px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    max-width: 850px;
+    margin: 0 auto;
+    color: var(--light-text);
 }
 
 .contact-info h3 {
@@ -341,6 +342,44 @@ footer {
 .contact-item a:hover {
     color: var(--brand-hover);
 }
+
+
+.message {
+    max-width: 700px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.message p {
+    color: var(--light-text);
+    line-height: 1.7;
+    text-align: center;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.detail {
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.detail h3 {
+    color: var(--brand);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.detail p {
+    color: var(--light-text);
+    margin: 0;
+}
+
 
 
 /*CLOSING / RECOMMENDATION*/
