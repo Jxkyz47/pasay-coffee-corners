@@ -58,7 +58,6 @@ nav ul {
 }
 
 nav li {
-    display: inline-block;
     margin-right: 30px;
 }
 
@@ -183,18 +182,75 @@ footer {
     margin-bottom: 15px;
 }
 
+.site-header {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 0;
+    margin-bottom: 40px;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+.site-brand h1 {
+    margin: 0;
+    color: var(--light-text);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.site-brand .subtitle {
+    margin: 5px 0 0;
+    color: var(--muted-grey);
+    font-size: 0.9rem;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.main-nav a:hover {
+    color: var(--brand-color);
+}
+
 
 /*PRODUCT / COFFEE CARDS*/
 
 
 .coffee-grid {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 24px;
     margin-top: 40px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .coffee-card {
+    flex: 1 1 240px;
     background: var(--card-background);
     color: var(--light-text);
     border: 1px solid var(--border-color);
@@ -220,6 +276,10 @@ footer {
 
 .coffee-info {
     padding: 25px;
+    display: block;
+    padding: 25px;
+    color: var(--light-text);
+    background: var(--card-background);
 }
 
 .coffee-info h3 {
@@ -231,10 +291,10 @@ footer {
 }
 
 .coffee-info .location {
-    color: var(--brand);
-    font-size: 0.8rem;
+    color: var(--brand-color);
+    font-size: 0.85rem;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 15px;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
