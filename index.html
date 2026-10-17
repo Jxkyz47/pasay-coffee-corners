@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,190 +12,252 @@
 
 <body>
 
-    <header  class="site-header">
-       
-        <h1>Pasay Coffee Corners</h1>
+    <div class="page">
 
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-           
-    </header>
+        <header class="site-header">
 
-    <main>
+            <h1>Pasay Coffee Corners</h1>
 
-        <section class="hero">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
 
-            <h2>Find Your Corner.</h2>
+        </header>
+
+    <aside class="sidebar">
+
+        <h2>Explore</h2>
+
+            <button class="sidebar-toggle" aria-expanded="false"
+                aria-controls="home-links">Home<span class="arrow">+</span>
+            </button>
+        <ul class="sidebar-links" id="home-links" hidden>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="index.html#about">About the Guide</a></li>
+        </ul>
+
+            <button class="sidebar-toggle" aria-expanded="false"
+                aria-controls="coffee-links">Coffee Picks<span class="arrow">+</span>
+            </button>
+        <ul class="sidebar-links" id="coffee-links" hidden>
+            <li><a href="places/gala-food-park.html">Gala Food Park</a></li>
+            <li><a href="places/because-coffee.html">Because Coffee</a></li>
+            <li><a href="places/but-first-coffee.html">But First, Coffee</a></li>
+        </ul>
+
+            <button class="sidebar-toggle" aria-expanded="false"
+                aria-controls="contact-links">Contact<span class="arrow">+</span>
+            </button>
+        <ul class="sidebar-links" id="contact-links" hidden>
+            <li><a href="contact.html">Contact Page</a></li>
+        </ul>
+
+        <h2 class="sidebar-subtitle">Our Style</h2>
+
+            <p>Cozy coffee corners, warm cups, and quiet moments around Pasay—one café at a time.</p> 
+
+    </aside>
+
+        <main>
+
+            <section class="hero">
+
+                <h2>Find Your Corner.</h2>
+
+                <p>
+                    A little guide to the coffee corners of Pasay, where warm cups,
+                    quiet tables, and gentle conversations turn ordinary days into
+                    moments worth remembering.
+                </p>
+
+            </section>
+
+            <section class="about-guide" id="about">
+
+                <div class="guide-card">
+
+                    <div class="guide-photo">
+
+                        <img src="images/me.jpg"
+                             alt="Jefferson De Leon at a rooftop cafe in Pasay">
+
+                    </div>
+
+                    <div class="guide-text">
+
+                        <p class="small-title">
+                            The Person Behind The Guide
+                        </p>
+
+                        <h2>Hi, I'm Jefferson.</h2>
+
+                        <p>
+                            I have always found something comforting about coffee
+                            shops—the soft hum of conversations, the scent of
+                            freshly brewed coffee, and the feeling of having
+                            nowhere else to be for a while.
+                        </p>
+
+                        <p>
+                            Through this guide, I want to share some of the coffee
+                            spots around Pasay that I find worth visiting, whether
+                            you are looking for a quiet place to study, a cozy
+                            corner to gather your thoughts, or simply somewhere
+                            to sit with good coffee and good company.
+                        </p>
+
+                        <p>
+                            Every café has its own little story, and this guide
+                            is my way of collecting some of those stories,
+                            one cup at a time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="coffee-grid" id="picks">
+
+                <article class="coffee-card">
+
+                    <img src="images/gala.jpg"
+                         alt="Japanese-themed interior of Gala Food Park">
+
+                    <div class="coffee-info">
+
+                        <h3>Gala Food Park</h3>
+
+                        <p class="location">
+                            Pasay City · Near SM Mall of Asia
+                        </p>
+
+                        <p class="description">
+                            A lively Japanese-themed food park where food, drinks,
+                            and colorful surroundings come together under one roof.
+                            I recommend Gala Food Park for days when coffee alone
+                            is not enough—for moments when you want to wander,
+                            take pictures, try something new, and share a long
+                            conversation with friends.
+                        </p>
+
+                    </div>
+
+                    <a href="places/gala-food-park.html"
+                       class="read-button">READ MORE</a>
+
+                </article>
+
+                <article class="coffee-card">
+
+                    <img src="images/because.jpg"
+                         alt="A cup of coffee at Because Coffee">
+
+                    <div class="coffee-info">
+
+                        <h3>Because Coffee</h3>
+
+                        <p class="location">
+                            Makati City
+                        </p>
+
+                        <p class="description">
+                            A welcoming place for a quiet break when the city feels
+                            a little too busy. I like the idea of stopping here with
+                            a cup in hand, letting the noise fade into the background,
+                            and giving yourself a moment to simply breathe.
+                        </p>
+
+                    </div>
+
+                    <a href="places/because-coffee.html"
+                       class="read-button">READ MORE</a>
+
+                </article>
+
+                <article class="coffee-card">
+
+                    <img src="images/first.jpg"
+                         alt="Coffee from But First, Coffee at SM Mall of Asia">
+
+                    <div class="coffee-info">
+
+                        <h3>But First, Coffee</h3>
+
+                        <p class="location">
+                            SM Mall of Asia · Pasay City
+                        </p>
+
+                        <p class="description">
+                            A familiar coffee stop for those moments when you need
+                            a little comfort before continuing with the day. Whether
+                            you are meeting a friend, taking a break from shopping,
+                            or simply craving a cold coffee after walking around
+                            the city, it is a simple place to pause and enjoy a
+                            few quiet minutes.
+                        </p>
+
+                    </div>
+
+                    <a href="places/but-first-coffee.html"
+                       class="read-button">READ MORE</a>
+
+                </article>
+
+            </section>
+
+            <section class="closing">
+
+                <h2>Take A Little Break.</h2>
+
+                <p>
+                    Sometimes all you need is a good cup of coffee,
+                    a comfortable chair, and somewhere to slow down.
+                </p>
+
+                <a href="#picks">
+                    EXPLORE THE PICKS
+                </a>
+
+            </section>
+
+        </main>
+
+        <footer>
 
             <p>
-                A little guide to the coffee corners of Pasay, where warm cups,
-                quiet tables, and gentle conversations turn ordinary days into
-                moments worth remembering.
+                © 2026 Pasay Coffee Corners.
+                One cup, one corner, one story at a time.
             </p>
 
-        </section>
+        </footer>
 
-        <section class="about-guide" id="about">
-
-            <div class="guide-card">
-
-                <div class="guide-photo">
-
-                    <img src="images/me.jpg"
-                         alt="Jefferson De Leon at a rooftop cafe in Pasay">
-
-                </div>
-
-
-                <div class="guide-text">
-
-                    <p class="small-title">
-                        The Person Behind The Guide
-                    </p>
-
-                    <h2>Hi, I'm Jefferson.</h2>
-
-                    <p>
-                        I have always found something comforting about coffee
-                        shops—the soft hum of conversations, the scent of
-                        freshly brewed coffee, and the feeling of having
-                        nowhere else to be for a while.
-                    </p>
-
-                    <p>
-                        Through this guide, I want to share some of the coffee
-                        spots around Pasay that I find worth visiting, whether
-                        you are looking for a quiet place to study, a cozy
-                        corner to gather your thoughts, or simply somewhere
-                        to sit with good coffee and good company.
-                    </p>
-
-                    <p>
-                        Every café has its own little story, and this guide
-                        is my way of collecting some of those stories,
-                        one cup at a time.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="coffee-grid">
-
-            <article class="coffee-card">
-
-                <img src="images/gala.jpg"
-                     alt="Japanese-themed interior of Gala Food Park">
-
-                <div class="coffee-info">
-
-                    <h3>Gala Food Park</h3>
-
-                    <p class="location">
-                        Pasay City · Near SM Mall of Asia
-                    </p>
-
-                    <p class="description">
-                        A lively Japanese-themed food park where food, drinks,
-                        and colorful surroundings come together under one roof.
-                        I recommend Gala Food Park for days when coffee alone
-                        is not enough—for moments when you want to wander,
-                        take pictures, try something new, and share a long
-                        conversation with friends.
-                    </p>
-
-                </div>
-                <a href="places/gala-food-park.html" class="read-button">READ MORE</a>
-            </article>
-
-
-            <article class="coffee-card">
-
-                <img src="images/because.jpg"
-                     alt="A cup of coffee at Because Coffee">
-
-                <div class="coffee-info">
-
-                    <h3>Because Coffee</h3>
-
-                    <p class="location">
-                        Makati City
-                    </p>
-
-                    <p class="description">
-                        A welcoming place for a quiet break when the city feels
-                        a little too busy. I like the idea of stopping here with
-                        a cup in hand, letting the noise fade into the background,
-                        and giving yourself a moment to simply breathe.
-                    </p>
-
-                </div>
-                 <a href="places/because-coffee.html" class="read-button">READ MORE</a>
-            
-            </article>
-
-            <article class="coffee-card">
-
-                <img src="images/first.jpg"
-                     alt="Coffee from But First, Coffee at SM Mall of Asia">
-
-                <div class="coffee-info">
-
-                    <h3>But First, Coffee</h3>
-
-                    <p class="location">
-                        SM Mall of Asia · Pasay City
-                    </p>
-
-                    <p class="description">
-                        A familiar coffee stop for those moments when you need
-                        a little comfort before continuing with the day. Whether
-                        you are meeting a friend, taking a break from shopping,
-                        or simply craving a cold coffee after walking around
-                        the city, it is a simple place to pause and enjoy a
-                        few quiet minutes.
-                    </p>
-
-                </div>
-                 <a href="places/but-first-coffee.html" class="read-button">READ MORE</a>
-            </article>
-            
-            
-        </section>
-
-        <section class="closing">
-
-            <h2>Take A Little Break.</h2>
-
-            <p>
-                Sometimes all you need is a good cup of coffee,
-                a comfortable chair, and somewhere to slow down.
-            </p>
-
-            <a href="#picks">
-                EXPLORE THE PICKS
-            </a>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <p>
-            © 2026 Pasay Coffee Corners.
-            One cup, one corner, one story at a time.
-        </p>
-
-    </footer>
+    </div>
 
 </body>
+
+<script>
+    document.querySelectorAll(".sidebar-toggle").forEach(button => {
+        button.addEventListener("click", () => {
+            const links = document.getElementById(
+                button.getAttribute("aria-controls")
+            );
+
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+            button.setAttribute("aria-expanded", !isExpanded);
+            links.hidden = isExpanded;
+
+            button.querySelector(".arrow").textContent =
+                isExpanded ? "+" : "−";
+        });
+    });
+</script>
+</body>
+
 </html>
