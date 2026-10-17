@@ -8,6 +8,7 @@
     <title>Pasay Coffee Corners</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/me.jpg" type="image/png">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 
         <header class="site-header">
 
-            <h1>Pasay Coffee Corners</h1>
+            <h1 id="guide-name">Pasay Coffee Corners</h1>
 
             <nav class="main-nav">
                 <ul>
@@ -124,7 +125,7 @@
 
             <section class="coffee-grid" id="picks">
 
-                <article class="coffee-card">
+                <article class="coffee-card" data-rating="4.5">
 
                     <img src="images/gala.jpg"
                          alt="Japanese-themed interior of Gala Food Park">
@@ -153,7 +154,7 @@
 
                 </article>
 
-                <article class="coffee-card">
+                <article class="coffee-card" data-rating="4.0">
 
                     <img src="images/because.jpg"
                          alt="A cup of coffee at Because Coffee">
@@ -180,7 +181,7 @@
 
                 </article>
 
-                <article class="coffee-card">
+                <article class="coffee-card" data-rating="4.2">
 
                     <img src="images/first.jpg"
                          alt="Coffee from But First, Coffee at SM Mall of Asia">
@@ -210,6 +211,52 @@
                 </article>
 
             </section>
+            
+            
+<section class="guide-insights">
+    <h2>Guide Insights</h2>
+    <p class="insights-intro">
+        A little overview of our coffee picks, all in one place.
+    </p>
+
+    <div class="insights-grid">
+
+        <article class="insight-card">
+            <h3>The Guide</h3>
+            <p class="insight-label">Welcome to</p>
+            <p class="insight-value" id="guide-display">
+                Pasay Coffee Corners
+            </p>
+            <p class="insight-note">
+                Cozy coffee corners, one cup at a time.
+            </p>
+        </article>
+
+        <article class="insight-card">
+            <h3>Coffee Picks</h3>
+            <p class="insight-label">Places featured</p>
+            <p class="insight-number" id="place-count">0</p>
+            <p class="insight-label">Average rating</p>
+            <p class="insight-number">
+                <span id="average-rating">0.0</span><span>/5</span>
+            </p>
+        </article>
+
+        <article class="insight-card">
+            <h3>Visit Guide</h3>
+            <p class="insight-label">Rating recommendation</p>
+            <p class="insight-value" id="rating-result"></p>
+
+            <p class="insight-label">Budget and availability</p>
+            <p class="insight-value" id="budget-result"></p>
+
+            <p class="insight-label">Distance note</p>
+            <p class="insight-value" id="distance-result"></p>
+        </article>
+
+    </div>
+</section>
+
 
             <section class="closing">
 
@@ -230,34 +277,17 @@
 
         <footer>
 
-            <p>
-                © 2026 Pasay Coffee Corners.
-                One cup, one corner, one story at a time.
+            <p id="copyright">
+                © Pasay Coffee Corners. One cup, one corner, one story at a time.
             </p>
 
         </footer>
 
     </div>
 
-</body>
 
-<script>
-    document.querySelectorAll(".sidebar-toggle").forEach(button => {
-        button.addEventListener("click", () => {
-            const links = document.getElementById(
-                button.getAttribute("aria-controls")
-            );
 
-            const isExpanded = button.getAttribute("aria-expanded") === "true";
-
-            button.setAttribute("aria-expanded", !isExpanded);
-            links.hidden = isExpanded;
-
-            button.querySelector(".arrow").textContent =
-                isExpanded ? "+" : "−";
-        });
-    });
-</script>
+<script src="script.js"></script>
 </body>
 
 </html>

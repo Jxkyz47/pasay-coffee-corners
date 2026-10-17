@@ -546,6 +546,80 @@ select {
     margin-top: 18px;
 }
 
+.guide-insights {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 45px 0;
+    padding: 30px;
+    background: #eedeca;
+    color: #3e2b22;
+    border: 1px solid #ddc8b3;
+    border-radius: 12px;
+}
+
+.guide-insights > h2 {
+    margin: 0 0 10px;
+    color: #4b3025;
+    font-size: 27px;
+}
+
+.insights-intro {
+    margin-bottom: 25px;
+    color: #786255;
+    line-height: 1.7;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.insight-card {
+    min-width: 0;
+    padding: 22px;
+    background: #ece2d6;
+    border: 1px solid #f5b97e;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+.insight-card h3 {
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    color: #674634;
+    border-bottom: 1px solid #e5d5c5;
+    font-size: 17px;
+}
+
+.insight-card p {
+    line-height: 1.6;
+}
+
+.insight-label {
+    margin: 12px 0 4px;
+    color: #887365;
+    font-size: 13px;
+}
+
+.insight-value {
+    margin: 4px 0 15px;
+    color: #493126;
+    font-weight: 600;
+}
+
+.insight-number {
+    margin: 4px 0 15px;
+    color: #85583b;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.insight-note {
+    color: #786255;
+    font-size: 14px;
+}
+
 /*RESPONSIVE DESIGN*/
 
 @media (max-width: 700px) {
@@ -596,6 +670,32 @@ select {
 
     .site-header {
         padding: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .insights-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .guide-insights {
+        margin: 30px 0;
+        padding: 20px;
+    }
+
+    .guide-insights > h2 {
+        font-size: 23px;
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .insight-card {
+        padding: 18px;
     }
 }
 }
